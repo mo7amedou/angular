@@ -1,0 +1,87 @@
+<app-header></app-header>
+
+<div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+        <div class="h1"><h1>Student Information</h1></div>
+      <form>
+
+        <div class="formbold-mb-5">
+          <label  class="formbold-form-label"> Id </label>
+          <input
+          [(ngModel)]="student.id"
+            type="number"
+            name="id"
+            placeholder="ID"
+            class="formbold-form-input"
+            disabled
+          />
+        </div>
+
+        <div class="formbold-mb-5">
+          <label  class="formbold-form-label"> Full Name* </label>
+          <input
+          [(ngModel)]="student.fullName"
+            type="text"
+            name="fullName"
+            placeholder="Full Name"
+            class="formbold-form-input"
+            required
+          />
+        </div>
+
+        <div class="formbold-mb-5">
+          <label class="formbold-form-label"> Phone Number </label>
+          <input
+          [(ngModel)]="student.numero"
+            type="number"
+            name="numero"
+            placeholder="Enter your phone number"
+            class="formbold-form-input"
+          />
+        </div>
+        
+        <div class="flex flex-wrap formbold--mx-3">
+            
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5 w-full">
+              <label class="formbold-form-label"> Age </label>
+              <input
+              [(ngModel)]="student.age"
+                type="number"
+                name="age"
+                placeholder="your age"
+                class="formbold-form-input"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label>Gender*</label>
+            <div class="gender">
+               <input type="radio" [(ngModel)]="student.gender" name="Male" value="Male" required>
+              <label class="radio">Male</label>
+              <input type="radio" [(ngModel)]="student.gender" name="Fimale" value="Fimale" required>
+              <label class="radio">Female</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="formbold-mb-5">
+            <label class="formbold-form-label"> NNI </label>
+            <input
+            [(ngModel)]="student.nni"
+              type="number"
+              name="NNI"
+              placeholder="Enter your national idendity number"
+              class="formbold-form-input"
+              
+            />
+          </div>
+        <div>
+          <button class="formbold-btn"  (click)="save()">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,18 @@
+<div class="content">
+
+<div id="bg"></div>
+
+<form [formGroup]="formGroup" (ngSubmit)="loginProces()">
+  <div class="form-field">
+    <input type="email" placeholder="Email / Username" required formControlName="email"/>
+  </div>
+  
+  <div class="form-field">
+    <input type="password" placeholder="Password" required formControlName="password"/>                         
+</div>
+
+  <div class="form-field">
+    <button class="btn" type="submit">Log in</button>
+  </div>
+</form>
+
